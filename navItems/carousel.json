@@ -1,0 +1,21 @@
+[{
+    "title": "Photo Books",
+    "image": "../images/photo-books.BFWXs58k_Z2dARYP.webp",
+    "description": "From high-end photography albums to keepsake family books, photo books are our most premium format with multiple trim sizes and paper types.",
+    "price": "$29.99"
+}, {
+    "title": "Paperback & Hardcover Books",
+    "image": "../images/paperbacks-hardcovers.s4O7V8S__2o6Y8d.webp",
+    "description": "Ideal for books that combine art with text or just text alone like portfolios, cookbooks, novels, children\\’s books and the like.",
+    "price": "$19.99"
+}, {
+    "title": "Magazines",
+    "image": "../images/magazines.Wp1b1f1X_Z2dARYP.webp",
+    "description": "Create stunning magazines with our easy-to-use templates. Ideal for portfolios, event programs, and promotional materials.",
+    "price": "$14.99"
+}, {
+    "title": "Notebooks & journals",
+    "image": "../images/notebooks-journals.Xp1b1f1X_Z2dARYP.webp",
+    "description": "Choose from blank, lined, square, or dot-grid notebook pages, plus easily add photos or illustrations within the pages.",
+    "price": "$9.99"
+}]
