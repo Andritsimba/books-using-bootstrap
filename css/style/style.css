@@ -1,0 +1,39 @@
+
+.hero-container {
+    min-height: 80vh;
+    background: linear-gradient(135deg, #2d2d70, #5a4fcf);
+    color: white;
+}
+
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.329),
+            transparent 60%);
+    animation: pulse 3s ease-in-out infinite;
+
+}
+
+#mainNav {
+    z-index: 3;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.hero-container .container {
+    position: relative;
+    z-index: 2;
+}

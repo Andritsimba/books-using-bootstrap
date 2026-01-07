@@ -7,7 +7,7 @@ fetch("navItems/menuItems.json")
     })
     .then(data => {
         const mainNav = document.getElementById("mainNav");
-        const menuItems = Array.isArray(data.menuItems) ? data.menuItems : [];
+        const menuItems = data.menuItems;
         const ul = document.createElement("ul");
         ul.classList.add("navbar-nav", "mx-auto", "mb-2", "mb-lg-0");
         menuItems.forEach(item => {
