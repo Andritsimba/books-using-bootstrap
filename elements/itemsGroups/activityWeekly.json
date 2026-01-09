@@ -1,0 +1,149 @@
+{
+    "activityWeekly":[
+        {
+            "id": 1,
+            "name": "75 Books Challenge for 2026",
+            "link": "/75-books-challenge-for-2026",
+            "description": "Anyone can join at any time! Just start a thread and begin listing the books you have read in 2026. New folks, start here: Welcome To New Friends",
+            "count": 3.830,
+            "icon": "../images/icon/coffee-cup.png"
+        },
+        {
+            "id": 2,
+            "name": "club read 2026",
+            "link": "/club-read-2026",
+            "description": "Club Read is a home for thoughtful readers who enjoy sharing and talking about what we are reading. This is year eighteen and Club Read members",
+            "count": 1.641,
+            "icon": "../images/icon/book-club.png"
+        },
+        {
+            "id": 3,
+            "name": "2026 Category Challenge",
+            "link": "/2026-category-challenge",
+            "description": "Welcome to the 2026 Category Challenge! The only rule for this challenge is to read some books in some categories -- otherwise, there are no rules!",
+            "count": 1.208,
+            "icon": "../images/icon/milestone.png"
+        },
+        {
+            "id": 4,
+            "name": "The Poetry Collective",
+            "link": "/the-poetry-collective",
+            "description": "Welcome! Here poetry lovers unite to share and discuss a poem a week, making our own rolling anthology you might say. Once a week, on Saturday",
+            "count": 50,
+            "icon": "../images/icon/bard.png"
+        },
+        {
+            "id": 5,
+            "name": "Bug Collectors",
+            "link": "/bug-collectors",
+            "description": "This is the place to post or discuss bugs on LibraryThing (this includes TinyCat). It's not a wishlist for features, nor a list of things that could be added",
+            "count": 90,
+            "icon": "../images/icon/bug.png"
+        },
+        {
+            "id": 6,
+            "name": "Name that Book",
+            "link": "/name-that-book",
+            "description": "Have you forgotten the name of a book you once read? This group is here to help you find it again! Please carefully read the Posting Guidelines thread ….",
+            "count": 150,
+            "icon": "../images/icon/clapperboard.png"
+        },
+        {
+            "id": 7,
+            "name": "Science Fiction Fans",
+            "link": "/scientifiction-fans",
+            "description": "For fans of SF, Sci-Fi, Scifi and any other abbreviation you can think of! This is a discussion group for books and subjects related to those books.",
+            "count": 1550,
+            "icon": "../images/icon/science-fiction.png"
+        },
+        {
+            "id": 8,
+            "name": "It's A GoodThing Group Read",
+            "link": "/it-s-a-goodthing-group-read",
+            "description": "A relaxed place to enjoy talking about books we'll read together. Beginning January 2026 a monthly book choice is to be decided. Then, don't worry …",
+            "count": 50,
+            "icon": "../images/icon/like.png"
+        },
+        {
+            "id": 9,
+            "name": "Folio Society Devotees",
+            "link": "/folio-society-devotees",
+            "description": "Welcome to Folio Society Devotees, a Library Thing forum for those who are interested in discussing the beautiful books published by the Folio ….",
+            "count": 228,
+            "icon": "../images/icon/meeting.png"
+        },
+        {
+            "id": 10,
+            "name": "The Green Dragon",
+            "link": "/the-green-dragon",
+            "description": "Tolkien, Fantasy, SciFi, mythology - any and all books of wonder! Virtual ale & warm lively chat - join us in LibraryThing's best pub! For over 15 ….",
+            "count": 50,
+            "icon": "../images/icon/dragon.png"
+        },
+        {
+            "id": 11,
+            "name": "Needlearts Collective",
+            "link": "/needlearts-collective",
+            "description": "A versatile, dynamic and supportive community of knitters, quilters, embroiderers, cross-stitchers, tatters, crocheters, lacemakers... and other ….",
+            "count": 137,
+            "icon": "../images/icon/abstract.png"
+        },
+        {
+            "id": 12,
+            "name": "New features and other improvements",
+            "link": "/new-features-and-other-improvements",
+            "description": "This is a group for LibraryThing staff to announce and discuss new features and other improvements with members. Unlike every other group, this group is moderated by LibraryThing staff",
+            "count": 30,
+            "icon": "../images/icon/new-features.png"
+        },
+        {
+            "id": 13,
+            "name": "FantasyFans",
+            "link": "/fanteasyfans",
+            "description": "For fans of fantasy fiction, of any type. Drop in to talk about what you're currently reading or to start discussing your favorite tropes, plots, or ….",
+            "count": 150,
+            "icon": "../images/icon/cerberus.png"
+        },
+        {
+            "id": 14,
+            "name": "Manga and Anime Addicts",
+            "link": "/manga-and-anime-addicts",
+            "description": "For all those who like to read manga and watch anime. Welcome to all new members! I hope you'll enjoy the group. Please read the pinned posts to make sure you don't miss anything",
+            "count": 50,
+            "icon": "../images/icon/manga.png"
+        },
+        {
+            "id": 15,
+            "name": "Mystery and Suspense",
+            "link": "/mystery-and-suspense",
+            "description": "This is a group for everybody who loves to read Mysteries and Suspense. So come in and pull up a chair and tell us what Mystery or Suspense you are reading",
+            "count": 50,
+            "icon": "../images/icon/unknown.png"
+        },
+        {
+            "id": 16,
+            "name": "Tattered but still lovely",
+            "link": "/tattered-but-still-lovely",
+            "description": "Welcome! Here poetry lovers unite to share and discuss a poem a week, making our own rolling anthology you might say. Once a week, on Saturday",
+            "count": 253,
+            "icon": "../images/icon/theatre.png"
+        },
+        {
+            "id": 17,
+            "name": "Crime, Thriller & Mystery",
+            "link": "/crime-thriller-mystery",
+            "description": "For all of you who enjoy a good thriller, a mystery story, bloody or not :o) To share opinions and get to know new authors!",
+            "count": 100,
+            "icon": "../images/icon/detective.png"
+        },
+        {
+            "id": 18,
+            "name": "Crime, Thriller & Mystery",
+            "link": "/crime-thriller-mystery",
+            "description": "For all of you who enjoy a good thriller, a mystery story, bloody or not :o) To share opinions and get to know new authors!",
+            "count": 100,
+            "icon": "../images/icon/detective.png"
+        }
+    ],
+    "hasNextPage": true
+}

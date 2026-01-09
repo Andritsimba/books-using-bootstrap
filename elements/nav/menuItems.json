@@ -1,0 +1,122 @@
+{
+    "menuItems": [
+        {
+            "id": 1,
+            "name": "Products",
+            "link": "/products",
+            "subMenu": [
+                {
+                    "id": 1,
+                    "name": "Shop All",
+                    "link": "/shop-all"
+                },
+                {
+                    "id": 2,
+                    "name": "Photo Books",
+                    "link": "/photo-books"
+                },
+                {
+                    "id": 3,
+                    "name": "Layflat Books",
+                    "link": "/layflat-books"
+                },
+                {
+                    "id": 4,
+                    "name": "Paperback and Hardcover Books",
+                    "link": "/part-hardcover-books"
+                },
+                {
+                    "id": 5,
+                    "name": "Magazines & A5 Books",
+                    "link": "/magazines-a5-books"
+                },
+                {
+                    "id": 6,
+                    "name": "Notebooks & Planners",
+                    "link": "/notebooks-planners"
+                    
+                },
+                {
+                    "id": 7,
+                    "name": "Wall Art",
+                    "link": "/wall-art"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Pricing",
+            "link": "/pricing",
+            "subMenu" :[
+                {
+                    "id": 1,
+                    "name": "Photo Books Pricing",
+                    "link": "/photo-books-pricing"
+                },
+                {
+                    "id": 2,
+                    "name": "Wall Art Pricing",
+                    "link": "/wall-art-pricing"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Designs Tools",
+            "link": "/design-tools",
+            "subMenu": [
+                {
+                    "id": 1,
+                    "name": "BookWright Online Editor",
+                    "link": "/online-editor"
+                },
+                {
+                    "id": 2,
+                    "name": "Adobe Tools",
+                    "link": "/adobe-tools"
+                },
+                {
+                    "id": 3,
+                    "name": "PDF to Book",
+                    "link": "/pdf-to-book"
+                },
+                {
+                    "id": 4,
+                    "name": "iOS App",
+                    "link": "/ios-app"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Sell & Self-Publish",
+            "link": "/sell-self-publish"
+        },
+        {
+            "id": 5,
+            "name": "Bookstores",
+            "link": "/bookstores"
+        },
+        {
+            "id": 6,
+            "name": "Resources",
+            "link": "/resources"
+        }
+    ],
+    "login": [
+        {
+            "id": 1,
+            "name": "Sign Up",
+            "link": "/signup"
+        },
+        {
+            "id": 2,
+            "name": "Log In",
+            "link": "/login"
+        },{
+            "id": 3,
+            "name": "Start Project",
+            "link": "/cart"
+        }
+    ]
+}
