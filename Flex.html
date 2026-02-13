@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Avancé</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dashboard Avancé</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Analytics</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Paramètres</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Filtres -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <label for="monthFilter" class="form-label">Mois</label>
+        <select id="monthFilter" class="form-select">
+          <option value="all" selected>Tous</option>
+          <option value="jan">Janvier</option>
+          <option value="feb">Février</option>
+          <option value="mar">Mars</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="regionFilter" class="form-label">Région</label>
+        <select id="regionFilter" class="form-select">
+          <option value="all" selected>Toutes</option>
+          <option value="eu">Europe</option>
+          <option value="us">Amérique</option>
+          <option value="asia">Asie</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grille du dashboard -->
+    <div class="row g-4">
+      <!-- Bar Chart -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Ventes Mensuelles</h5>
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line Chart -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Trafic Web</h5>
+            <canvas id="lineChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pie Chart -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Répartition Utilisateurs</h5>
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table des ventes -->
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Détails des Ventes</h5>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Mois</th>
+                  <th>Ventes</th>
+                  <th>Région</th>
+                </tr>
+              </thead>
+              <tbody id="salesTableBody">
+                <tr><td>Janvier</td><td>12</td><td>Europe</td></tr>
+                <tr><td>Février</td><td>19</td><td>Amérique</td></tr>
+                <tr><td>Mars</td><td>8</td><td>Asie</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Données initiales
+    const salesData = [
+      { month: 'Janvier', value: 12, region: 'Europe' },
+      { month: 'Février', value: 19, region: 'Amérique' },
+      { month: 'Mars', value: 8, region: 'Asie' },
+    ];
+
+    // Graphiques
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    const barChart = new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: salesData.map(d => d.month),
+        datasets: [{
+          label: 'Ventes',
+          data: salesData.map(d => d.value),
+          backgroundColor: 'rgba(54, 162, 235, 0.7)'
+        }]
+      },
+      options: { responsive: true }
+    });
+
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    const lineChart = new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
+        datasets: [{
+          label: 'Visites',
+          data: [30, 40, 35, 50, 45, 60, 70],
+          borderColor: 'rgba(255, 99, 132, 1)',
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          tension: 0.3
+        }]
+      },
+      options: { responsive: true }
+    });
+
+    const pieCtx = document.getElementById('pieChart').getContext('2d');
+    const pieChart = new Chart(pieCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Europe', 'Amérique', 'Asie'],
+        datasets: [{
+          data: [12, 19, 8],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(255, 206, 86, 0.7)'
+          ]
+        }]
+      },
+      options: { responsive: true }
+    });
+
+    // Filtrage interactif
+    const monthFilter = document.getElementById('monthFilter');
+    const regionFilter = document.getElementById('regionFilter');
+    const salesTableBody = document.getElementById('salesTableBody');
+
+    function updateDashboard() {
+      const selectedMonth = monthFilter.value;
+      const selectedRegion = regionFilter.value;
+
+      // Filtrer les données
+      const filtered = salesData.filter(d => 
+        (selectedMonth === 'all' || d.month.toLowerCase().startsWith(selectedMonth)) &&
+        (selectedRegion === 'all' || d.region.toLowerCase().startsWith(selectedRegion))
+      );
+
+      // Mettre à jour Bar Chart
+      barChart.data.labels = filtered.map(d => d.month);
+      barChart.data.datasets[0].data = filtered.map(d => d.value);
+      barChart.update();
+
+      // Mettre à jour Pie Chart
+      const regions = ['Europe', 'Amérique', 'Asie'];
+      pieChart.data.datasets[0].data = regions.map(r => filtered.filter(d => d.region === r).reduce((sum, d) => sum + d.value, 0));
+      pieChart.update();
+
+      // Mettre à jour Table
+      salesTableBody.innerHTML = '';
+      filtered.forEach(d => {
+        const row = `<tr><td>${d.month}</td><td>${d.value}</td><td>${d.region}</td></tr>`;
+        salesTableBody.innerHTML += row;
+      });
+    }
+
+    monthFilter.addEventListener('change', updateDashboard);
+    regionFilter.addEventListener('change', updateDashboard);
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

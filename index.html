@@ -18,8 +18,8 @@
                 <a class="navbar-brand" href="#">
                     <img src="images/logo/erasebg-transformed.png" alt="logo" srcset="" width="60px">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toogle="collapse" aria-expanded="false"
-                    aria-label="Toggle navigation" aria-controls="mainNav" id="#mainNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span> </button>
                 <div class="collapse navbar-collapse" id="mainNav"></div>
                 <div id="loging" class="text-white"></div>
@@ -33,7 +33,7 @@
                 Dream Big for 2026
             </h1>
             <p class="lead mb-4 hero-text" data-aos="fade-up" data-aos-delay="150">
-                As the year winds down, it's time to dream up your next project. </br>
+                As the year winds down, it's time to dream up your next project. <br>
                 With your ideas and Blurb's 20 years of bookmaking expertise, the possibilities are endless.
             </p>
             <a href="#" class="btn btn-primary btn-lg" data-aos="zoom-in" data-aos-delay="350">
@@ -68,7 +68,7 @@
                         <h5 class="fw-bold card-title">Bookmaking Expertise</h5>
                         <p class="card-text text-muted small">Leverage our 20 years of experience to create stunning
                             books
-                            effortlessly. </br>
+                            effortlessly. <br>
                             You might be looking at this Slider Revolution template and wondering how the heck you’re
                             going
                             to repurpose it for your needs. Don’t worry. Whether you want to edit the logo, change the
@@ -82,7 +82,7 @@
                         <h5 class="fw-bold card-title">Bookmaking Expertise</h5>
                         <p class="card-text text-muted small">Leverage our 20 years of experience to create stunning
                             books
-                            effortlessly. </br>
+                            effortlessly. <br>
                             You might be looking at this Slider Revolution template and wondering how the heck you’re
                             going
                             to repurpose it for your needs. Don’t worry. Whether you want to edit the logo, change the
@@ -115,29 +115,50 @@
             Show more
         </button>
     </section>
-</body>
-<script src="elements/nav/menuItems.js"></script>
-<script src="elements/itemsGroups/activity.js"></script>
-<script src="script/bootstrap-dist-js/bootstrap.bundle.min.js"></script>
-<script src="script/aos/aos_2_3_4.js"></script>
-<script>
-    AOS.init({
-        duration: 800,
-        easing: 'ease-out-cubic',
-        once: false,
-        mirror: true,
-        offset: 100
-    });
-</script>
-<script>
-    document
-    .getElementById('showMoreBtn')
-    .addEventListener('click', function (e) {
-        e.preventDefault(e);
-        loadNextPageData();
-    });
 
-</script>
+    <section class="chart-container container-fluid my-5">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="header-home">
+                    <h2 class="text-capitalize text-start fs-3 fw-lighter">charts</h2>
+                    <h3 class="text-capitalize text-start fs-4 fw-lighter text-danger">active this week</h3>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex justify-content-center align-items-center">
+                <canvas id="myChart" data-aos="zoom-in"></canvas>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="elements/nav/menuItems.js"></script>
+    <script src="elements/itemsGroups/activity.js"></script>
+    <script src="script/bootstrap-dist-js/bootstrap.bundle.min.js"></script>
+    <script src="script/aos/aos_2_3_4.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: false,
+            mirror: true,
+            offset: 100
+        });
+    </script>
+    <script>
+        document
+            .getElementById('showMoreBtn')
+            .addEventListener('click', function (e) {
+                e.preventDefault();
+                loadNextPageData();
+            });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/chart/Config.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, config);
+    </script>
 </body>
 
 </html>
